@@ -1,6 +1,6 @@
 class Quote < ApplicationRecord
-  paginates_per 5
-  max_paginates_per 10
+  paginates_per 20
+  max_paginates_per 50
 
   validates :content, :author, presence: true
 
