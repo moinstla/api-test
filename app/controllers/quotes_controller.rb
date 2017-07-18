@@ -2,7 +2,9 @@ class QuotesController < ApplicationController
 
   def index
     @quotes = Quote.all
-    json_response(@quotes)
+    author = params[:author]
+    @quotes = Quote.author_search(author)
+    json_response(@quotes.page(params[:page]))
   end
 
   def show

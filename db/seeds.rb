@@ -1,4 +1,5 @@
 class Seed
+  paginates_per 2
 
   def self.begin
     seed = Seed.new
@@ -6,7 +7,7 @@ class Seed
   end
 
   def generate_quotes
-    20.times do |i|
+    200.times do |i|
       author =
       quote = Quote.create!(
         author: Faker::Book.author,
