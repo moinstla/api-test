@@ -1,5 +1,5 @@
 class Seed
-  paginates_per 2
+
 
   def self.begin
     seed = Seed.new
